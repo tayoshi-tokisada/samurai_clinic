@@ -1,3 +1,5 @@
+/* PC : over 1050px */
+
 /* ================== */
 /* PC, SP共通 */
 /* ================== */
@@ -21,6 +23,18 @@ body{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+.bold{
+  font-weight: 700;
+}
+.fz16{
+  font-size: 16px;
+  line-height: 22.5px;
+}
+.fz32{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 54px;
 }
 h1{
   font-family: "Noto Sans CJK JP";
@@ -65,6 +79,9 @@ a{
   transition: all 300ms linear;
   cursor: pointer;
 }
+li{
+  line-height: 26.06px;
+}
 a:link{
   color: #000000;
 }
@@ -78,8 +95,63 @@ a:hover{
   color: #000000;
   opacity: 0.5;
 }
+.lightGreen{
+  color: #F0F5E1;
+}
+.lowerMiddleLightGreen{
+  color: #E7EDD4;
+}
+.upperMiddleLightGreen{
+ color: #DAE2C2;
+}
+.grassGreen{
+  color: #96C519;
+}
 .green{
   color: #1B9240;
+}
+.mossGreen{
+  color: #468459;
+}
+.darkGreen{
+  color: #0C4324;
+}
+.white{
+  color: #ffffff;
+}
+.black{
+  color: #000000;
+}
+.m0{
+  margin: 0;
+}
+.mt0{
+  margin-top: 0;
+}
+.ml10{
+  margin-left: 100px;
+}
+.mt-40{
+  margin-top: -40px;
+}
+.tac{
+  text-align: center;
+}
+.firstLayer{
+  position: relative;
+  z-index: 99999;
+}
+.lastLayer{
+  position: relative;
+  z-index: 1;
+}
+.nowrap{
+  white-space: nowrap;
+}
+.img-360-300{
+  width: 360px;
+  height: 300px;
+  border-radius: 24px;
 }
 .tag{
   padding: 2px 16px;
@@ -101,11 +173,12 @@ a:hover{
   background-color: #4EB8BF;
 }
 .title{
+  position: relative;
   font-size: 24px;
   font-weight: 700;
-  line-height: 24px;
-  text-align: center;
+  line-height: 30px;
   color: #468459;
+  z-index: 10000;
 }
 .subTitle{
   font-size: 24px;
@@ -141,9 +214,28 @@ a:hover{
   width: 22px;
   height: 20px;
 }
-.flex{
+.flex-center{
   display: flex;
   justify-content: center;
+}
+.d_detailBtn{
+  margin: 0 0 0 auto;
+}
+.detailBtn{
+  border: 1px solid #0C4324;
+  border-radius: 6px;
+  padding: 3px 23px;
+  font-size: 14px;
+  line-height: 20.27px;
+  text-align: center;
+  color: #0C4324;
+  background: #ffffff;
+}
+.detailBtn > a{
+  margin: 0;
+}
+.detailBtn::before{
+  content: "→";
 }
 
 /* ヘッダー */
@@ -157,24 +249,24 @@ header > a{
   z-index: 90;
   margin-left: 20px;
 }
-nav{
+header > nav{
   z-index: 90;
   margin-right: 20px;
 }
-nav a{
+header > nav a{
   font-size: 16px;
   color: #ffffff;
 }
-nav a:link{
+header > nav a:link{
   color: #ffffff;
 }
-nav a:visited{
+header > nav a:visited{
   color: #ffffff;
 }
-nav a:active{
+header > nav a:active{
   color: #ffffff;
 }
-nav a:hover{
+header > nav a:hover{
   color: #ffffff;
   opacity: 0.5;
 }
@@ -184,7 +276,7 @@ article{
   position: relative;
   top: -50px;
 }
-.carouselImg{
+.topCarousel .carouselImg{
   margin: 0 0 0 auto;
   width: 70%;
   height: auto;
@@ -197,6 +289,26 @@ article{
   width: 20%;
   height: auto;
 }
+#d_topLeft{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 20%;
+  height: 80%;
+}
+#p_topLeft{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40.54px;
+  letter-spacing: 15px;
+  writing-mode: vertical-rl;
+  color: #468459;
+  width: 20%;
+  height: 80%;
+}
 
 /* お知らせバー */
 #s_newsBar{
@@ -206,5 +318,151 @@ article{
 
 /* 特長 */
 #s_concept{
-  margin: 100px auto 0 auto;
+  margin: 100px auto 200px auto;
+  max-width: 800px;
+}
+.conceptLeft{
+  flex-grow: 1;
+  width: 50%;
+  margin-right: 30px;
+}
+.conceptRight{
+  flex-grow: 1;
+  width: 50%;
+}
+.baseBox {
+  /* --- 親BOXの定義 --------------------------------------------*/
+   display       : inline-block;         /* インラインブロック化 */
+   position      : relative;             /* 親要素               */
+   margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+   height        : 190px;                /* BOXの高さ            */
+ }
+  /* --- 背景透かし文字の定義 -----------------------------------*/
+ .baseBox .backStr {
+   position      : absolute;             /* 親要素からの相対位置 */
+   display       : inline-block;         /* インラインブロック化 */
+   white-space   : nowrap;               /* 折り返ししない       */
+   font-size     : 134px;                 /* 背景透かし文字サイズ */
+   font-weight   : bold;                 /* 太字                 */
+   margin: 0;
+   z-index: 1;
+ }
+ .baseBox .backImg {
+  position      : absolute;             /* 親要素からの相対位置 */
+  display       : inline-block;         /* インラインブロック化 */
+  white-space   : nowrap;               /* 折り返ししない       */
+  z-index: 90;
+}
+.baseBox .backStr.backPos{
+  transform: translate(-25%, 150%);
+ }
+.baseBox .backImg.backPos{
+  transform     : translate(50%, 110%);
+ }
+.d_detailBtn{
+  display: flex;
+  justify-content: right;
+}
+
+/* コース・料金 */
+#s_course{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F0F5E1;
+  width: 100%;
+}
+#s_course .baseBox .backStr.backPos{
+  transform: translate(-70%, 200%);
+ }
+ #s_course .baseBox .backImg.backPos{
+  transform: translate(30%, -50%);
+ }
+
+/* お客様の声 */
+#s_voice{
+  margin-bottom: 150px;
+}
+.bottomCarousel .carouselImg{
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+.semicircle {
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  height: 0;
+  z-index: 20;
+}
+.semicircle::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  z-index: 30;
+  width: 600px;
+  height: 488px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translateX(-50%) translateY(70%);
+  bottom: 0px;
+}
+#s_voice .title{
+  top: -70px;
+}
+#s_voice div:has(.detailBtn){
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+.voice{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 80px;
+  z-index: 90;
+}
+.voice div{
+  width: 20%;
+  min-width: 250px;
+  margin-left: 50px;
+}
+.circleImg{
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  border: 2px;
+}
+
+/* アクセス */
+#s_access{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F0F5E1;
+  width: 100%;
+  margin-bottom: 0;
+}
+.accessLeft{
+  width: 459px;
+}
+
+/* フッター */
+footer{
+  position: relative;
+  top: -50px;
+}
+footer > div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  background-color: #F0F5E1;
+  width: 100%;
+}
+footer > div > a{
+  margin-left: 20px;
+}
+footer > div > nav{
+  margin-right: 20px;
 }
