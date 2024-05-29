@@ -29,7 +29,9 @@ body{
 }
 .fz16{
   font-size: 16px;
-  line-height: 22.5px;
+}
+.fz24{
+  font-size: 24px;
 }
 .fz32{
   font-size: 32px;
@@ -75,7 +77,6 @@ p{
 }
 a{
   text-decoration: none;
-  margin-left: 16px;
   transition: all 300ms linear;
   cursor: pointer;
 }
@@ -237,17 +238,36 @@ a:hover{
 .detailBtn::before{
   content: "→";
 }
+.contactBtn{
+  border: none;
+  border-radius: 4px;
+  background-color: #1B9240;
+  padding: 10px 20px;
+}
+.contactBtn > a{
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.contactHeaderBtn{
+  border: none;
+  border-radius: 4px;
+  background-color: #0C4324;
+  padding: 10px 20px;
+}
+.contactHeaderBtn > a{
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
 
 /* ヘッダー */
 header{
+  position: relative;
   display: flex;
   justify-content: space-between;
   font-size: 34px;
   z-index: 90;
-}
-header > a{
-  z-index: 90;
-  margin-left: 20px;
 }
 header > nav{
   z-index: 90;
@@ -256,6 +276,14 @@ header > nav{
 header > nav a{
   font-size: 16px;
   color: #ffffff;
+  z-index: 90;
+  text-shadow: 1px 1px 0px #46845940;
+}
+header > nav > a{
+  margin-left: 1vw;
+}
+header > nav > button{
+  margin-left: 1vw;
 }
 header > nav a:link{
   color: #ffffff;
@@ -275,45 +303,68 @@ header > nav a:hover{
 article{
   position: relative;
   top: -50px;
+  z-index: 1;
+}
+#s_topCarousel{
+  position: relative;
+  z-index: 1;
 }
 .topCarousel .carouselImg{
   margin: 0 0 0 auto;
-  width: 70%;
+  width: 80%;
   height: auto;
   z-index: 1;
 }
+.topCarousel + div{
+  background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  height: 30px;
+  margin: 0;
+  z-index: 2;
+}
 #topLeft{
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 20%;
-  height: auto;
-}
-#d_topLeft{
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 20%;
+  top: 0%;
+  left: -14%;
+  width: 30%;
   height: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
 }
-#p_topLeft{
+#topLeft > p{
   position: absolute;
-  top: 5%;
-  left: 5%;
-  font-size: 28px;
+  top: 21%;
+  left: 80%;
+  font-size: 2vw;
   font-weight: 600;
-  line-height: 40.54px;
+  line-height: 3vw;
   letter-spacing: 15px;
   writing-mode: vertical-rl;
   color: #468459;
   width: 20%;
-  height: 80%;
+  margin: 0;
+  z-index: 20;
+  white-space: nowrap;
+}
+#topLeft > img{
+  position: relative;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
 }
 
 /* お知らせバー */
 #s_newsBar{
   display: flex;
   justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+#s_newsBar > p{
+  margin-top: 0;
 }
 
 /* 特長 */
@@ -443,6 +494,36 @@ article{
   background-color: #F0F5E1;
   width: 100%;
   margin-bottom: 0;
+  padding-bottom: 40px;
+}
+#s_access table{
+  margin: 20px 0;
+}
+#s_access table tr th{
+  background-color: #468459;
+  border: solid 1px #dddddd;
+}
+#s_access table tr td:nth-child(n+2){
+  width: 40px;
+}
+#s_access table tr:nth-child(even) td{
+  background-color: #ffffff;
+  border: solid 1px #dddddd;
+}
+#s_access table tr:nth-child(odd) td{
+  background-color: #f6f6f6;
+  border: solid 1px #dddddd;
+}
+#s_access table th{
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+#s_access table td{
+  text-align: center;
+  font-size: 14px;
+  color: #468459;
+  background-color: #ffffff;
 }
 .accessLeft{
   width: 459px;
@@ -455,14 +536,27 @@ footer{
 }
 footer > div{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 16px;
   background-color: #F0F5E1;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 footer > div > a{
   margin-left: 20px;
 }
 footer > div > nav{
+  margin-left: 20px;
   margin-right: 20px;
+}
+.copyright{
+  background-color: #468459;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding: 11px;
 }
