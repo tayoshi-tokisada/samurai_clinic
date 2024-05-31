@@ -38,35 +38,67 @@ body{
   font-weight: 700;
   line-height: 54px;
 }
-h1{
-  font-family: "Noto Sans CJK JP";
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 32px;
-  text-align: left;
-  color: #0C4324;
-}
 h2{
-  font-family: "Noto Sans CJK JP";
-  font-size: 32px;
+  position: relative;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 30px;
+  color: #468459;
+  z-index: 10000;
+}
+h2::before{
+  content: url("../image/deco/Head_01_Icon.png");
+  width: 22px;
+  height: 20px;
+}
+h2 > span{
+  font-weight: 400;
+  line-height: 24px;
   text-align: left;
-  color: #0C4324;
 }
 h3{
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #468459;
+  z-index: 10000;
+  text-align: center;
+  padding: 0 2em;
+}
+h3::before{
+  content: "__";
+  color: #ffffff00;
+  background-image: url("../image/slash.svg");
+  width: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+h3::after{
+  content: "__";
+  color: #ffffff00;
+  background-image: url("../image/slash.svg");
+  display: inline-block;
+  transform: scale(-1,1);
+  width: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+h3 + p{
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #468459;
+  z-index: 10000;
+  text-align: center;
+  margin-top: 24px;
+}
+h4{
   font-family: "Noto Sans CJK JP";
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
-  text-align: left;
-  color: #0C4324;
-}
-h4{
-  font-family: "Noto Sans CJK JP";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
   text-align: left;
   color: #0C4324;
 }
@@ -129,6 +161,9 @@ a:hover{
 .mt0{
   margin-top: 0;
 }
+.mb0{
+  margin-bottom: 0;
+}
 .ml10{
   margin-left: 100px;
 }
@@ -181,13 +216,6 @@ a:hover{
   color: #468459;
   z-index: 10000;
 }
-.subTitle{
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  color: #468459;
-}
 .smallTitle{
   font-size: 18px;
   font-weight: 700;
@@ -210,11 +238,6 @@ a:hover{
   gap: 0px;
   border-bottom: 2.44px;
 }
-.afterIcon::before{
-  content: url("../image/deco/Head_01_Icon.png");
-  width: 22px;
-  height: 20px;
-}
 .flex-center{
   display: flex;
   justify-content: center;
@@ -230,7 +253,7 @@ a:hover{
   line-height: 20.27px;
   text-align: center;
   color: #0C4324;
-  background: #ffffff;
+  background: #ffffff00;
 }
 .detailBtn > a{
   margin: 0;
@@ -333,20 +356,47 @@ article{
   justify-content: left;
   align-items: flex-start;
 }
-#topLeft > p{
+#topLeft > div{
+  display: flex;
   position: absolute;
   top: 21%;
   left: 80%;
+  width: 20%;
+  z-index: 20;
+}
+#topLeft > div > p{
+  position: relative;
+  z-index: 10;
+  font-family: "Shippori Mincho", serif;
+  font-style: normal;
   font-size: 2vw;
   font-weight: 600;
   line-height: 3vw;
   letter-spacing: 15px;
   writing-mode: vertical-rl;
   color: #468459;
-  width: 20%;
   margin: 0;
-  z-index: 20;
+  padding: 0;
   white-space: nowrap;
+  background-image: url("../image/dashed.svg");
+  background-position: right;
+  background-repeat: repeat-y;
+  overflow: visible;
+  height: fit-content;
+}
+#topLeft > div > img:nth-of-type(1){
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 12vw;
+  z-index: 1;
+}
+#topLeft > div > img:nth-of-type(2){
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  width: 12vw;
+  z-index: 1;
 }
 #topLeft > img{
   position: relative;
@@ -386,7 +436,7 @@ article{
    display       : inline-block;         /* インラインブロック化 */
    position      : relative;             /* 親要素               */
    margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
-   height        : 190px;                /* BOXの高さ            */
+   height        : 150px;                /* BOXの高さ            */
  }
   /* --- 背景透かし文字の定義 -----------------------------------*/
  .baseBox .backStr {
@@ -423,11 +473,17 @@ article{
   background-color: #F0F5E1;
   width: 100%;
 }
+#s_course h3{
+  margin-top: 0;
+}
+#s_course h3 + p{
+  margin-bottom: 0;
+}
 #s_course .baseBox .backStr.backPos{
   transform: translate(-70%, 200%);
  }
  #s_course .baseBox .backImg.backPos{
-  transform: translate(30%, -50%);
+  transform: translate(30%, -60%);
  }
 
 /* お客様の声 */
@@ -458,7 +514,9 @@ article{
   transform: translateX(-50%) translateY(70%);
   bottom: 0px;
 }
-#s_voice .title{
+#s_voice h3,
+#s_voice p
+{
   top: -70px;
 }
 #s_voice div:has(.detailBtn){
@@ -560,3 +618,37 @@ footer > div > nav{
   margin: 0;
   padding: 11px;
 }
+
+/* お知らせ詳細 */
+/* h1{
+  font-family: "Noto Sans CJK JP";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: #0C4324;
+}
+h2{
+  font-family: "Noto Sans CJK JP";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: #0C4324;
+}
+h3{
+  font-family: "Noto Sans CJK JP";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #0C4324;
+}
+h4{
+  font-family: "Noto Sans CJK JP";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  color: #0C4324;
+} */
