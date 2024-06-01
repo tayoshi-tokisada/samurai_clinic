@@ -5,10 +5,17 @@ header{
   justify-content: space-between;
   font-size: 34px;
   z-index: 90;
+  margin: 0 20px;
+}
+header > a{
+  display: block;
+  height: 28px;
+}
+header > a > img{
+  padding-top: 16px;
 }
 header > nav{
   z-index: 90;
-  margin-right: 20px;
 }
 header > nav a{
   font-size: 16px;

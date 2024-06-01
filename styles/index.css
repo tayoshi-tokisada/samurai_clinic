@@ -1,3 +1,7 @@
+main{
+  margin-bottom: -50px;
+}
+
 article{
   position: relative;
   top: -50px;
@@ -149,7 +153,6 @@ article{
   justify-content: center;
   background-color: #F0F5E1;
   width: 100%;
-  overflow-x: hidden;
 }
 #s_course h3{
   margin-top: 0;

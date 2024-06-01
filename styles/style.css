@@ -13,6 +13,7 @@ body{
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
+  margin: 0;
 }
 .shippori-mincho {
     font-family: "Shippori Mincho", serif;
@@ -283,4 +284,13 @@ a:hover{
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
+}
+#backToTopBtn{
+  position: fixed;
+  opacity: 0;
+  bottom: -80px;
+  right: 20px;
+  z-index: 999999;
+  width: 64px;
+  transition: all 300ms linear;
 }

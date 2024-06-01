@@ -1,7 +1,7 @@
 /* フッター */
 footer{
   position: relative;
-  top: -50px;
+  top: 0px;
 }
 footer > div{
   display: flex;
