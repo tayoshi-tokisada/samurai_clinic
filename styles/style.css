@@ -284,8 +284,3 @@ a:hover{
   font-weight: 700;
   color: #ffffff;
 }
-article{
-  position: relative;
-  top: -50px;
-  z-index: 1;
-}
