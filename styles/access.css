@@ -1,0 +1,42 @@
+/* アクセス */
+#s_access{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F0F5E1;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+#s_access table{
+  margin: 20px 0;
+}
+#s_access table tr th{
+  background-color: #468459;
+  border: solid 1px #dddddd;
+}
+#s_access table tr td:nth-child(n+2){
+  width: 40px;
+}
+#s_access table tr:nth-child(even) td{
+  background-color: #ffffff;
+  border: solid 1px #dddddd;
+}
+#s_access table tr:nth-child(odd) td{
+  background-color: #f6f6f6;
+  border: solid 1px #dddddd;
+}
+#s_access table th{
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+#s_access table td{
+  text-align: center;
+  font-size: 14px;
+  color: #468459;
+  background-color: #ffffff;
+}
+.accessLeft{
+  width: 459px;
+}

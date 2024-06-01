@@ -1,0 +1,78 @@
+/* トップカルーセル */
+#s_topCarousel{
+  position: relative;
+  z-index: 1;
+}
+.topCarousel .carouselImg{
+  margin: 0 0 0 auto;
+  width: 80%;
+  height: auto;
+  z-index: 1;
+}
+.topCarousel + div{
+  background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  height: 30px;
+  margin: 0;
+  z-index: 2;
+}
+#topLeft{
+  position: absolute;
+  top: 0%;
+  left: -14%;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+#topLeft > div{
+  display: flex;
+  position: absolute;
+  top: 21%;
+  left: 72%;
+  width: 20%;
+  z-index: 20;
+}
+#topLeft > div > p{
+  position: relative;
+  z-index: 10;
+  font-family: "Shippori Mincho", serif;
+  font-style: normal;
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 3vw;
+  letter-spacing: 15px;
+  writing-mode: vertical-rl;
+  color: #468459;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  background-image: url("../image/dashed.svg");
+  background-position: right;
+  background-repeat: repeat-y;
+  overflow: visible;
+  height: fit-content;
+}
+#topLeft > div > img:nth-of-type(1){
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 12vw;
+  z-index: 1;
+}
+#topLeft > div > img:nth-of-type(2){
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  width: 12vw;
+  z-index: 1;
+}
+#topLeft > img{
+  position: relative;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}

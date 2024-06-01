@@ -1,0 +1,138 @@
+/* お知らせバー */
+#s_newsBar{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+#s_newsBar > p{
+  margin-top: 0;
+}
+
+/* 特長 */
+#s_concept{
+  margin: 100px auto 200px auto;
+  max-width: 800px;
+}
+.conceptLeft{
+  flex-grow: 1;
+  width: 50%;
+  margin-right: 30px;
+}
+.conceptRight{
+  flex-grow: 1;
+  width: 50%;
+}
+.baseBox {
+  /* --- 親BOXの定義 --------------------------------------------*/
+   display       : inline-block;         /* インラインブロック化 */
+   position      : relative;             /* 親要素               */
+   margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+   height        : 150px;                /* BOXの高さ            */
+ }
+  /* --- 背景透かし文字の定義 -----------------------------------*/
+ .baseBox .backStr {
+   position      : absolute;             /* 親要素からの相対位置 */
+   display       : inline-block;         /* インラインブロック化 */
+   white-space   : nowrap;               /* 折り返ししない       */
+   font-size     : 134px;                 /* 背景透かし文字サイズ */
+   font-weight   : bold;                 /* 太字                 */
+   margin: 0;
+   z-index: 1;
+ }
+ .baseBox .backImg {
+  position      : absolute;             /* 親要素からの相対位置 */
+  display       : inline-block;         /* インラインブロック化 */
+  white-space   : nowrap;               /* 折り返ししない       */
+  z-index: 90;
+}
+.baseBox .backStr.backPos{
+  transform: translate(-25%, 150%);
+ }
+.baseBox .backImg.backPos{
+  transform     : translate(50%, 110%);
+ }
+.d_detailBtn{
+  display: flex;
+  justify-content: right;
+}
+
+/* コース・料金 */
+#s_course{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F0F5E1;
+  width: 100%;
+  overflow-x: hidden;
+}
+#s_course h3{
+  margin-top: 0;
+}
+#s_course h3 + p{
+  margin-bottom: 0;
+}
+#s_course .baseBox .backStr.backPos{
+  transform: translate(-70%, 200%);
+ }
+ #s_course .baseBox .backImg.backPos{
+  transform: translate(30%, -60%);
+ }
+
+/* お客様の声 */
+#s_voice{
+  margin-bottom: 150px;
+}
+.bottomCarousel .carouselImg{
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+.semicircle {
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  height: 0;
+  z-index: 20;
+}
+.semicircle::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  z-index: 30;
+  width: 600px;
+  height: 488px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translateX(-50%) translateY(70%);
+  bottom: 0px;
+}
+#s_voice h3,
+#s_voice p
+{
+  top: -70px;
+}
+#s_voice div:has(.detailBtn){
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+.voice{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 80px;
+  z-index: 90;
+}
+.voice div{
+  width: 20%;
+  min-width: 250px;
+  margin-left: 50px;
+}
+.circleImg{
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  border: 2px;
+}
