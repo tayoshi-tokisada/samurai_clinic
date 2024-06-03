@@ -5,7 +5,7 @@ header{
   justify-content: space-between;
   font-size: 34px;
   z-index: 90;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 header > a{
   display: block;
