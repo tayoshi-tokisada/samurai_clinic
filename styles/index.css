@@ -8,6 +8,28 @@ article{
   z-index: 1;
 }
 
+/* ヘッダー */
+header{
+  background-color: #ffffff00;
+}
+header > nav a{
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #46845940;
+}
+header > nav a:link{
+  color: #ffffff;
+}
+header > nav a:visited{
+  color: #ffffff;
+}
+header > nav a:active{
+  color: #ffffff;
+}
+header > nav a:hover{
+  color: #ffffff;
+  opacity: 0.5;
+}
+
 /* トップカルーセル */
 #s_topCarousel{
   position: relative;
@@ -217,10 +239,4 @@ article{
   width: 20%;
   min-width: 250px;
   margin-left: 50px;
-}
-.circleImg{
-  width: 240px;
-  height: 240px;
-  border-radius: 100%;
-  border: 2px;
 }

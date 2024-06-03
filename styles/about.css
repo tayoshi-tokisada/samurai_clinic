@@ -1,0 +1,160 @@
+/* about.html */
+
+/* メインビジュアル */
+#s_mainVisual{
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+#s_mainVisual img{
+  margin: 0 0 0 20vw;
+  width: 80%;
+  height: auto;
+  z-index: 1;
+}
+#s_mainVisual > img + div{
+  background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  height: 10px;
+  margin: 0;
+  z-index: 2;
+}
+#topLeft{
+  position: absolute;
+  top: 0%;
+  left: -8%;
+  width: 30%;
+  height: 80%;
+}
+#topLeft > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  z-index: 20;
+}
+#topLeft > div > p:nth-of-type(1){
+  position: relative;
+  z-index: 10;
+  font-family: "Shippori Mincho", serif;
+  font-style: normal;
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 2vw;
+  color: #468459;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: visible;
+  height: fit-content;
+}
+#topLeft > div > p:nth-of-type(2){
+  position: relative;
+  z-index: 10;
+  font-size: 1.1vw;
+  font-weight: 400;
+  line-height: 2vw;
+  color: #468459;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: visible;
+  height: fit-content;
+  background-image: url("../image/dashed-horizontal.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  width: 6em;
+}
+#topLeft > div > img{
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 10vw;
+  z-index: 1;
+}
+#topLeft > img{
+  position: relative;
+  width: 38vw;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+/* 特長 */
+#s_concept{
+  margin: 100px auto 200px auto;
+  max-width: 800px;
+}
+.conceptLeft{
+  flex-grow: 1;
+  width: 50%;
+  margin-right: 30px;
+}
+.conceptRight{
+  flex-grow: 1;
+  width: 50%;
+}
+.baseBox {
+  /* --- 親BOXの定義 --------------------------------------------*/
+   display       : inline-block;         /* インラインブロック化 */
+   position      : relative;             /* 親要素               */
+   margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+   height        : 150px;                /* BOXの高さ            */
+ }
+  /* --- 背景透かし文字の定義 -----------------------------------*/
+ .baseBox .backStr {
+   position      : absolute;             /* 親要素からの相対位置 */
+   display       : inline-block;         /* インラインブロック化 */
+   white-space   : nowrap;               /* 折り返ししない       */
+   font-size     : 134px;                 /* 背景透かし文字サイズ */
+   font-weight   : bold;                 /* 太字                 */
+   margin: 0;
+   z-index: 1;
+ }
+ .baseBox .backImg {
+  position      : absolute;             /* 親要素からの相対位置 */
+  display       : inline-block;         /* インラインブロック化 */
+  white-space   : nowrap;               /* 折り返ししない       */
+  z-index: 90;
+}
+.baseBox .backStr.backPos{
+  transform: translate(-25%, 150%);
+ }
+.baseBox .backImg.backPos{
+  transform     : translate(50%, 110%);
+ }
+.d_detailBtn{
+  display: flex;
+  justify-content: right;
+}
+
+/* 施術の流れ */
+#s_flow{
+  margin: 100px auto 450px auto;
+  max-width: 800px;
+}
+
+/* 根本改善のポイント */
+#s_point{
+  margin-bottom: 50px;
+}
+.point{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  z-index: 90;
+}
+.point > div > img{
+  margin: 20px;
+}
+.point > div > p{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.voice div{
+  width: 20%;
+  min-width: 250px;
+  margin-left: 50px;
+}

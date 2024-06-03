@@ -6,6 +6,7 @@ header{
   font-size: 34px;
   z-index: 90;
   margin: 0 40px;
+  background-color: #ffffff;
 }
 header > a{
   display: block;
@@ -19,26 +20,49 @@ header > nav{
 }
 header > nav a{
   font-size: 16px;
-  color: #ffffff;
+  color: #000000;
   z-index: 90;
   text-shadow: 1px 1px 0px #46845940;
 }
 header > nav > a{
   margin-left: 1vw;
 }
-header > nav > button{
-  margin-left: 1vw;
-}
 header > nav a:link{
-  color: #ffffff;
+  color: #000000;
 }
 header > nav a:visited{
-  color: #ffffff;
+  color: #000000;
 }
 header > nav a:active{
-  color: #ffffff;
+  color: #000000;
 }
 header > nav a:hover{
+  color: #000000;
+  opacity: 0.5;
+}
+
+.contactHeaderBtn{
+  border: none;
+  border-radius: 4px;
+  background-color: #0C4324;
+  padding: 10px 20px;
+  margin-left: 1vw;
+}
+.contactHeaderBtn > a{
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.contactHeaderBtn > a:link{
+  color: #ffffff;
+}
+.contactHeaderBtn > a:visited{
+  color: #ffffff;
+}
+.contactHeaderBtn > a:active{
+  color: #ffffff;
+}
+.contactHeaderBtn > a:hover{
   color: #ffffff;
   opacity: 0.5;
 }
