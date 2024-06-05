@@ -1,0 +1,33 @@
+/* コース・料金 */
+#s_course{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+#s_course h3{
+  margin-top: 0;
+}
+
+/* 保険診療 */
+#s_insurance,
+#s_selfPay{
+  margin: 100px auto 200px auto;
+  max-width: 800px;
+}
+.conceptLeft{
+  flex-grow: 1;
+  width: 50%;
+  margin-right: 30px;
+}
+.conceptRight{
+  flex-grow: 1;
+  width: 50%;
+  margin-left: 20px;
+}
+#s_insurance img,
+#s_selfPay img{
+  width: 520px;
+  height: 320px;
+
+}
