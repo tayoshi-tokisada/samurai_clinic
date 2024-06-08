@@ -1,0 +1,47 @@
+h2{
+  font-family: "Noto Sans CJK JP";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  color: #0C4324;
+}
+h2::before{
+  content: "";
+}
+
+#s_voice{
+  position: relative;
+  z-index: 90;
+  background-color: #fff;
+  margin: 0 10vw;
+}
+#s_voice > div{
+  display: flex;
+  justify-content: left;
+  margin-top: 50px;
+}
+#s_voice > div > img{
+  margin-right: 20px;
+}
+#s_voice > p:nth-last-of-type(1){
+  color: #1B9240;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+#s_voice > p:nth-last-of-type(1) > span:nth-of-type(1){
+  color: #fff;
+  background-color: #1B9240;
+}
+#s_voice > p:nth-last-of-type(1) > span:nth-of-type(1)::after,
+#s_voice > p > span:nth-of-type(1)::before{
+  content: "_";
+  color: #1B9240;
+}
+#s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::after,
+#s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::before{
+  content: "_";
+  color: #fff;
+}
