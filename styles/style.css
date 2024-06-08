@@ -15,31 +15,6 @@ body{
   overflow-x: hidden;
   margin: 0;
 }
-.shippori-mincho {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.merriweather-sans {
-  font-family: "Merriweather Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.bold{
-  font-weight: 700;
-}
-.fz16{
-  font-size: 16px;
-}
-.fz24{
-  font-size: 24px;
-}
-.fz32{
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 54px;
-}
 h2{
   position: relative;
   font-size: 24px;
@@ -53,7 +28,7 @@ h2::before{
   width: 22px;
   height: 20px;
 }
-h2 > span{
+h2 > span:not(#s_single span){
   font-weight: 400;
   line-height: 24px;
   text-align: left;
@@ -86,7 +61,7 @@ h3::after{
   background-size: contain;
   background-repeat: no-repeat;
 }
-h3 + p{
+h3 + p:not(#s_single p){
   position: relative;
   font-size: 24px;
   font-weight: 700;
@@ -129,6 +104,31 @@ a:active{
 a:hover{
   color: #000000;
   opacity: 0.5;
+}
+.shippori-mincho {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.merriweather-sans {
+font-family: "Merriweather Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+.bold{
+font-weight: 700;
+}
+.fz16{
+font-size: 16px;
+}
+.fz24{
+font-size: 24px;
+}
+.fz32{
+font-size: 32px;
+font-weight: 700;
+line-height: 54px;
 }
 .lightGreen{
   color: #F0F5E1;

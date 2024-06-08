@@ -15,6 +15,9 @@ h2{
   text-align: left;
   color: #0C4324;
 }
+h2::before{
+  content: "";
+}
 h3{
   font-family: "Noto Sans CJK JP";
   font-size: 24px;
@@ -22,6 +25,11 @@ h3{
   line-height: 24px;
   text-align: left;
   color: #0C4324;
+  padding-left: 0;
+}
+h3::before,
+h3::after{
+  content: "";
 }
 h4{
   font-family: "Noto Sans CJK JP";
@@ -30,4 +38,26 @@ h4{
   line-height: 18px;
   text-align: left;
   color: #0C4324;
+}
+
+#s_single{
+  position: relative;
+  z-index: 90;
+  background-color: #fff;
+  margin-left: 10vw;
+  width: 70vw;
+}
+#s_single p:nth-last-of-type(1){
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* カテゴリ */
+#s_category{
+  position: absolute;
+  z-index: 100;
+  top: 40vw;
+  right: 0;
+  margin-right: min(10vw, 100vw - 990px);
 }
