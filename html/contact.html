@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>トップページ｜SAMURAI整体院</title>
+    <title>お客様の声｜SAMURAI整体院</title>
     <meta name="description" content="当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。ご不安な点や疑問点などお気軽にご相談くださいませ。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add the slick-theme.css if you want default styling -->
@@ -14,14 +14,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Shippori+Mincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main-visual.css">
     <link rel="stylesheet" href="../styles/access.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/contact.css">
   </head>
 
   <body>
+    <header>
+      <a href="index.html">
+        <img class="titleLogo" src="../image/logo/Frame 2571@3x.svg" alt="タイトルロゴ">
+      </a>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="about.html">当院について</a>
+        <a href="course.html">コース・料金</a>
+        <a href="news.html">お知らせ</a>
+        <a href="voice.html">お客様の声</a>
+        <button class="contactHeaderBtn">
+          <a href="contact.html">ご予約・お問い合わせ</a>
+        </button>
+      </nav>
+    </header>
     <main>
       <article>
+        <!-- メインビジュアル -->
+        <section id="s_mainVisual">
+          <img src="../image/Courseprice.png" alt="">
+          <div></div>
+          <div id="topLeft">
+            <div>
+              <p>Contact</p>
+              <p>ご予約・お問い合わせ</p>
+              <img src="../image/_x31_7.svg" alt="">
+            </div>
+            <img src="../image/topCarouselLeftpart.svg" alt="">
+          </div>
+        </section>
+        <!-- breadcrumbs -->
+        <section id="s_breadcrumbs">
+          <p>ホーム > ご予約・お問い合わせ</p>
+        </section>
+        <!-- ご予約・お問い合わせ -->
+        <section id="s_contact">
+          <h2>お電話でのご予約・お問い合わせ</h2>
+          <p>
+            〒101-0022 東京都千代田区神田練塀町300番地<br>
+            住友不動産秋葉原駅前ビル 5F
+          </p>
+          <p class="darkGreen bold fz16">tel: <span class="fz24 bold">03-1234-5678</span></p>
+          <h2>ご予約・お問い合わせフォーム</h2>
+          <p>※2営業日以内にご返信いたします。</p>
+          <form action="/html/contact-thanks.html">
+            <div>
+              <label for="name">氏名（必須）</label>
+              <input id="name" type="text" placeholder="侍　太郎">
+            </div>
+            <div>
+              <label for="furigana">フリガナ（必須）</label>
+              <input id="furigana" type="text" placeholder="サムライ　タロウ">
+            </div>
+            <div>
+              <label for="tel">電話番号（必須）　<span>半角</span></label>
+              <input id="tel" type="text" placeholder="0312345678">
+            </div>
+            <div>
+              <label for="mailAddress">メールアドレス（必須）　<span>半角英数字</span></label>
+              <input id="mailAddress" type="text" placeholder="samurai-chiropractic@example.com ">
+            </div>
+            <div>
+              <label for="preferredDay">ご予約希望日</label>
+              <input id="preferredDay" type="text" placeholder="例) 2023年3月1日">
+            </div>
+            <div>
+              <label for="trouble">お悩み（必須）</label>
+              <select name="trouble" id="trouble" placeholder="お悩みを選択してください">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+              </select>
+            </div>
+            <div>
+              <label for="inquiry">お問い合わせ内容</label>
+              <textarea name="inquiry" id="inquiry" placeholder="できるだけ詳しいお問い合わせ内容を記入してください"></textarea>
+            </div>
+            <div>
+              <input id="submit" type="submit" value="送信">
+            </div>
+          </form>
+        </section>
         <!-- アクセス -->
         <section id="s_access">
           <img src="../image/wave.svg" alt="">
