@@ -77,7 +77,7 @@ $(function(){
     }
 
     // 電話番号
-    const telPattern = /^[0-9]{10,11}$/;
+    const telPattern = /^[0-9]+$/;
     // 入力チェック
     if($("#tel").val() == ""){
       arr_alertMsg.push("電話番号を入力してください。");
@@ -90,7 +90,7 @@ $(function(){
     }
 
     // メールアドレス
-    const emailPattern = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$/;
+    const emailPattern = /^[a-zA-Z0-9.@]+$/;
     // 入力チェック
     if($("#mailAddress").val() == ""){
       arr_alertMsg.push("メールアドレスを入力してください。");
