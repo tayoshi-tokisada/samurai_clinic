@@ -12,20 +12,20 @@ article{
 header{
   background-color: #ffffff00;
 }
-header > nav a{
+header > #nav-pc a{
   color: #ffffff;
   text-shadow: 1px 1px 0px #46845940;
 }
-header > nav a:link{
+header > #nav-pc a:link{
   color: #ffffff;
 }
-header > nav a:visited{
+header > #nav-pc a:visited{
   color: #ffffff;
 }
-header > nav a:active{
+header > #nav-pc a:active{
   color: #ffffff;
 }
-header > nav a:hover{
+header > #nav-pc a:hover{
   color: #ffffff;
   opacity: 0.5;
 }

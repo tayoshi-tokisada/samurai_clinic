@@ -22,10 +22,12 @@
 
   <body>
     <header>
+      <!-- ロゴ -->
       <a href="index.html">
-        <img class="titleLogo" src="../image/logo/Frame 2571@3x.svg" alt="タイトルロゴ">
+        <img class="titleLogo" src="../image/logo/logo.svg" alt="タイトルロゴ">
       </a>
-      <nav>
+      <!-- PC用nav -->
+      <nav id="nav-pc">
         <a href="index.html">ホーム</a>
         <a href="about.html">当院について</a>
         <a href="course.html">コース・料金</a>
@@ -34,6 +36,30 @@
         <button class="contactHeaderBtn">
           <a href="contact.html">ご予約・お問い合わせ</a>
         </button>
+      </nav>
+      <!-- SP用メニューボタン -->
+      <img id="menu-sp" src="/image/SP_Menu.svg" alt="">
+      <!-- SP用nav -->
+      <nav id="nav-sp">
+        <div>
+          <div>
+            <a href="index.html">
+              <img class="titleLogo" src="../image/logo/logo.svg" alt="タイトルロゴ">
+            </a>
+            <img id="menuClose" src="/image/SP_MenuClose.svg" alt="">
+          </div>
+          <div>
+            <p>メニュー</p>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">当院について</a>
+            <a href="course.html">コース・料金</a>
+            <a href="news.html">お知らせ</a>
+            <a href="voice.html">お客様の声</a>
+            <button class="contactHeaderBtn">
+              <a href="contact.html">ご予約・お問い合わせ</a>
+            </button>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -162,7 +188,7 @@
     <footer>
       <div>
         <a href="index.html">
-          <img class="titleLogo" src="../image/logo/Frame 2571@3x.svg" alt="タイトルロゴ">
+          <img class="titleLogo" src="../image/logo/logo.svg" alt="タイトルロゴ">
         </a>
         <nav>
           <a href="index.html">ホーム</a>
@@ -179,5 +205,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
+    <script type="text/javascript" src="../js/contact.js"></script>
   </body>
 </html>
