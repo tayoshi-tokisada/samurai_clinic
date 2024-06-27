@@ -69,8 +69,8 @@ header > nav a:hover{
   opacity: 0.5;
 }
 
-/* PC */
-@media screen and (min-width: 1050px){
+/* PC用 */
+@media screen and (min-width: 1051px){
   #nav-pc{
     display: block;
   }
@@ -80,14 +80,18 @@ header > nav a:hover{
   }
 }
 
-/* SP */
+/* SP・TAB用 */
 @media screen and (max-width: 1050px){
+  header{
+    margin-right: 20px;
+  }
   #nav-pc{
     display: none;
   }
   #menu-sp{
     display: block;
     margin-top: 25px;
+
   }
   #nav-sp{
     display: none;
