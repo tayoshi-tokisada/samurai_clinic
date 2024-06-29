@@ -30,85 +30,6 @@ header > #nav-pc a:hover{
   opacity: 0.5;
 }
 
-/* トップカルーセル */
-#s_topCarousel{
-  position: relative;
-  z-index: 1;
-}
-.topCarousel .carouselImg{
-  margin: 0 0 0 auto;
-  width: 80%;
-  height: auto;
-  z-index: 1;
-}
-.topCarousel + div{
-  background-color: #ffffff;
-  position: relative;
-  width: 100vw;
-  height: 30px;
-  margin: 0;
-  z-index: 2;
-}
-#topLeft{
-  position: absolute;
-  top: 0%;
-  left: -14%;
-  width: 30%;
-  height: 80%;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
-#topLeft > div{
-  display: flex;
-  position: absolute;
-  top: 21%;
-  left: 72%;
-  width: 20%;
-  z-index: 20;
-}
-#topLeft > div > p{
-  position: relative;
-  z-index: 10;
-  font-family: "Shippori Mincho", serif;
-  font-style: normal;
-  font-size: 2vw;
-  font-weight: 600;
-  line-height: 3vw;
-  letter-spacing: 15px;
-  writing-mode: vertical-rl;
-  color: #468459;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  background-image: url("../image/dashed.svg");
-  background-position: right;
-  background-repeat: repeat-y;
-  overflow: visible;
-  height: fit-content;
-}
-#topLeft > div > img:nth-of-type(1){
-  position: absolute;
-  top: 60%;
-  right: 0;
-  width: 12vw;
-  z-index: 1;
-}
-#topLeft > div > img:nth-of-type(2){
-  position: absolute;
-  top: -10%;
-  left: 5%;
-  width: 12vw;
-  z-index: 1;
-}
-#topLeft > img{
-  position: relative;
-  width: 50vw;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-}
-
 /* お知らせバー */
 #s_newsBar{
   display: flex;
@@ -241,17 +162,21 @@ header > #nav-pc a:hover{
   margin-left: 50px;
 }
 
-/* SP用 */
-@media screen and (max-width: 780px){
+/* PC用 */
+@media screen and (min-width: 680px){
+  /* トップカルーセル */
   #s_topCarousel{
     position: relative;
     z-index: 1;
   }
+  .SP-topCarousel{
+    display: none;
+  }
   .topCarousel .carouselImg{
+    display: block;
     margin: 0 0 0 auto;
-    height: 200vw;
-    max-height: 100vh;
-    width: auto;
+    width: 80%;
+    height: auto;
     z-index: 1;
   }
   .topCarousel + div{
@@ -265,7 +190,7 @@ header > #nav-pc a:hover{
   #topLeft{
     position: absolute;
     top: 0%;
-    left: -40%;
+    left: -14%;
     width: 30%;
     height: 80%;
     display: flex;
@@ -314,12 +239,104 @@ header > #nav-pc a:hover{
     width: 12vw;
     z-index: 1;
   }
-  #topLeft > img{
+  #topLeft > #topLeftImg{
+    display: block;
     position: relative;
-    left: -400px;
-    height: 200vw;
-    max-height: 100vh;
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  #topLeft > #SP-topLeftImg{
+    display: none;
+  }
+}
+
+/* SP用 */
+@media screen and (max-width: 680px){
+  /* トップカルーセル */
+  #s_topCarousel{
+    position: relative;
+    z-index: 1;
+  }
+  .topCarousel{
+    display: none;
+  }
+  .SP-topCarousel .carouselImg{
+    display: block;
+    margin: 0 0 0 auto;
+    height: calc(100vw * 5 / 3);
     width: auto;
+    z-index: 1;
+  }
+  .whitebox{
+    background-color: #ffffff;
+    position: relative;
+    width: 100vw;
+    height: 30px;
+    margin: 0;
+    z-index: 2;
+  }
+  #topLeft{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  #topLeft > div{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 20%;
+    z-index: 20;
+  }
+  #topLeft > div > p{
+    position: relative;
+    z-index: 10;
+    font-family: "Shippori Mincho", serif;
+    font-style: normal;
+    font-size: 6vw;
+    font-weight: 600;
+    line-height: 10vw;
+    letter-spacing: 15px;
+    writing-mode: vertical-rl;
+    color: #468459;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    background-image: url("../image/dashed.svg");
+    background-position: right;
+    background-repeat: repeat-y;
+    overflow: visible;
+    height: fit-content;
+  }
+  #topLeft > div > img:nth-of-type(1){
+    position: absolute;
+    top: 60%;
+    left: -30vw;
+    width: 60vw;
+    z-index: 1;
+  }
+  #topLeft > div > img:nth-of-type(2){
+    position: absolute;
+    top: -15vw;
+    left: -14vw;
+    width: 60vw;
+    z-index: 1;
+  }
+  #topLeft > #topLeftImg{
+    display: none;
+  }
+  #topLeft > #SP-topLeftImg{
+    display: block;
+    position: relative;
+    left: -50px;
+    height: calc(100vw * 5 / 3);
     margin: 0;
     padding: 0;
     z-index: 1;
