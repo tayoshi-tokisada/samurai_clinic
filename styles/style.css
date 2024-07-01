@@ -202,8 +202,9 @@ line-height: 54px;
 }
 .img-360-300{
   width: 360px;
-  height: 300px;
+  height: auto;
   border-radius: 24px;
+  max-width: 100%;
 }
 .img-320-320{
   width: 320px;

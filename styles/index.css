@@ -30,138 +30,6 @@ header > #nav-pc a:hover{
   opacity: 0.5;
 }
 
-/* お知らせバー */
-#s_newsBar{
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  z-index: 10;
-}
-#s_newsBar > p{
-  margin-top: 0;
-}
-
-/* 特長 */
-#s_concept{
-  margin: 100px auto 200px auto;
-  max-width: 800px;
-}
-.conceptLeft{
-  flex-grow: 1;
-  width: 50%;
-  margin-right: 30px;
-}
-.conceptRight{
-  flex-grow: 1;
-  width: 50%;
-}
-.baseBox {
-  /* --- 親BOXの定義 --------------------------------------------*/
-   display       : inline-block;         /* インラインブロック化 */
-   position      : relative;             /* 親要素               */
-   margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
-   height        : 150px;                /* BOXの高さ            */
- }
-  /* --- 背景透かし文字の定義 -----------------------------------*/
- .baseBox .backStr {
-   position      : absolute;             /* 親要素からの相対位置 */
-   display       : inline-block;         /* インラインブロック化 */
-   white-space   : nowrap;               /* 折り返ししない       */
-   font-size     : 134px;                 /* 背景透かし文字サイズ */
-   font-weight   : bold;                 /* 太字                 */
-   margin: 0;
-   z-index: 1;
- }
- .baseBox .backImg {
-  position      : absolute;             /* 親要素からの相対位置 */
-  display       : inline-block;         /* インラインブロック化 */
-  white-space   : nowrap;               /* 折り返ししない       */
-  z-index: 90;
-}
-.baseBox .backStr.backPos{
-  transform: translate(-25%, 150%);
- }
-.baseBox .backImg.backPos{
-  transform     : translate(50%, 110%);
- }
-.d_detailBtn{
-  display: flex;
-  justify-content: right;
-}
-
-/* コース・料金 */
-#s_course{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #F0F5E1;
-  width: 100%;
-}
-#s_course h3{
-  margin-top: 0;
-}
-#s_course h3 + p{
-  margin-bottom: 0;
-}
-#s_course .baseBox .backStr.backPos{
-  transform: translate(-70%, 200%);
- }
- #s_course .baseBox .backImg.backPos{
-  transform: translate(30%, -60%);
- }
-
-/* お客様の声 */
-#s_voice{
-  margin-bottom: 150px;
-}
-.bottomCarousel .carouselImg{
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 10;
-}
-.semicircle {
-  position: relative;
-  background: rgba(0, 0, 0, 0);
-  height: 0;
-  z-index: 20;
-}
-.semicircle::before {
-  position: absolute;
-  content: '';
-  left: 50%;
-  z-index: 30;
-  width: 600px;
-  height: 488px;
-  border-radius: 50%;
-  background: #ffffff;
-  transform: translateX(-50%) translateY(70%);
-  bottom: 0px;
-}
-#s_voice h3,
-#s_voice p
-{
-  top: -70px;
-}
-#s_voice div:has(.detailBtn){
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 100px;
-}
-.voice{
-  display: flex;
-  position: relative;
-  justify-content: center;
-  top: 80px;
-  z-index: 90;
-}
-.voice div{
-  width: 20%;
-  min-width: 250px;
-  margin-left: 50px;
-}
-
 /* PC用 */
 @media screen and (min-width: 680px){
   /* トップカルーセル */
@@ -250,6 +118,166 @@ header > #nav-pc a:hover{
   #topLeft > #SP-topLeftImg{
     display: none;
   }
+
+  /* お知らせバー */
+  #s_newsBar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    z-index: 10;
+    margin: 0 5vw;
+    padding: 20px 0;
+  }
+  #s_newsBar > div{
+    display: flex;
+  }
+  #s_newsBar > div > div{
+    margin-left: 2vw;
+  }
+  #s_newsBar > div span{
+    display: inline-block;
+  }
+  #newsBarDetail{
+    display: flex;
+    justify-content: left;
+  }
+  #newsBarContent{
+    margin-left: 1vw;
+  }
+
+  /* 特長 */
+  #s_concept{
+    margin: 100px auto 200px auto;
+    max-width: 800px;
+  }
+  .conceptLeft{
+    flex-grow: 1;
+    width: 50%;
+    margin-right: 30px;
+  }
+  .conceptRight{
+    flex-grow: 1;
+    width: 50%;
+  }
+  .baseBox {
+    /* --- 親BOXの定義 --------------------------------------------*/
+    display       : inline-block;         /* インラインブロック化 */
+    position      : relative;             /* 親要素               */
+    margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+    height        : 150px;                /* BOXの高さ            */
+  }
+    /* --- 背景透かし文字の定義 -----------------------------------*/
+  .baseBox .backStr {
+    position      : absolute;             /* 親要素からの相対位置 */
+    display       : inline-block;         /* インラインブロック化 */
+    white-space   : nowrap;               /* 折り返ししない       */
+    font-size     : 134px;                 /* 背景透かし文字サイズ */
+    font-weight   : bold;                 /* 太字                 */
+    margin: 0;
+    z-index: 1;
+  }
+  .baseBox .backImg {
+    position      : absolute;             /* 親要素からの相対位置 */
+    display       : inline-block;         /* インラインブロック化 */
+    white-space   : nowrap;               /* 折り返ししない       */
+    z-index: 90;
+  }
+  .baseBox .backStr.backPos{
+    transform: translate(-25%, 150%);
+  }
+  .baseBox .backImg.backPos{
+    transform     : translate(50%, 110%);
+  }
+  .d_detailBtn{
+    display: flex;
+    justify-content: right;
+  }
+
+  /* コース・料金 */
+  #s_course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F0F5E1;
+    width: 100%;
+  }
+  #s_course h3{
+    margin-top: 0;
+  }
+  #s_course h3 + p{
+    margin-bottom: 0;
+  }
+  #courseContents{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #courseContents > div{
+    margin-left: 20px;
+  }
+  #s_course .baseBox .backStr.backPos{
+    transform: translate(-70%, 200%);
+  }
+  #s_course .baseBox .backImg.backPos{
+    transform: translate(30%, -60%);
+  }
+
+  /* お客様の声 */
+  #s_voice{
+    margin-bottom: 150px;
+  }
+  .SP-bottomCarousel{
+    display: none;
+  }
+  .bottomCarousel .carouselImg{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }
+  .semicircle {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    height: 0;
+    z-index: 20;
+  }
+  .semicircle::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    z-index: 30;
+    width: 600px;
+    height: 488px;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: translateX(-50%) translateY(70%);
+    bottom: 0px;
+  }
+  #s_voice h3,
+  #s_voice p
+  {
+    top: -70px;
+  }
+  #s_voice div:has(.detailBtn){
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+  }
+  .voice{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 80px;
+    z-index: 90;
+  }
+  .voice div{
+    width: 20%;
+    min-width: 250px;
+    margin-left: 50px;
+  }
 }
 
 /* SP用 */
@@ -268,14 +296,6 @@ header > #nav-pc a:hover{
     height: calc(100vw * 5 / 3);
     width: auto;
     z-index: 1;
-  }
-  .whitebox{
-    background-color: #ffffff;
-    position: relative;
-    width: 100vw;
-    height: 30px;
-    margin: 0;
-    z-index: 2;
   }
   #topLeft{
     position: absolute;
@@ -340,5 +360,166 @@ header > #nav-pc a:hover{
     margin: 0;
     padding: 0;
     z-index: 1;
+  }
+
+  /* お知らせバー */
+  #s_newsBar{
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin: 0 5vw;
+    padding: 20px 0;
+  }
+  #newsBarDetail{
+    display: flex;
+    position: relative;
+    justify-content: left;
+    margin: 20px 5vw;
+  }
+  #newsBarContent{
+    margin-left: 20px;
+  }
+  #s_newsBar .openingHours{
+    display: block;
+  }
+  #newsListLink{
+    text-align: right;
+  }
+
+  /* 特長 */
+  #s_concept{
+    position: relative;
+    margin: 130vw 5vw 200px 5vw;
+    max-width: 800px;
+  }
+  .baseBox {
+    /* --- 親BOXの定義 --------------------------------------------*/
+    display       : inline-block;         /* インラインブロック化 */
+    position      : relative;             /* 親要素               */
+    margin        : 0 auto;               /* BOXの位置(中央寄せ)  */
+    height        : 150px;                /* BOXの高さ            */
+  }
+    /* --- 背景透かし文字の定義 -----------------------------------*/
+  .baseBox .backStr {
+    position      : absolute;             /* 親要素からの相対位置 */
+    display       : inline-block;         /* インラインブロック化 */
+    white-space   : nowrap;               /* 折り返ししない       */
+    font-size     : 20vw;                 /* 背景透かし文字サイズ */
+    font-weight   : bold;                 /* 太字                 */
+    margin: 0;
+    z-index: 1;
+  }
+  .baseBox .backImg {
+    position      : absolute;             /* 親要素からの相対位置 */
+    display       : inline-block;         /* インラインブロック化 */
+    white-space   : nowrap;               /* 折り返ししない       */
+    z-index: 1;
+  }
+  .baseBox .backStr.backPos{
+    transform: translate(-5%, -310%);
+  }
+  .baseBox .backImg.backPos{
+    transform     : translate(-60%, 110%);
+  }
+  #conceptDetail{
+    position: relative;
+    z-index: 90;
+  }
+  .detailBtn{
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    z-index: 90;
+  }
+  .conceptRightImg{
+    position: absolute;
+    top: -130vw;
+    left: -95vw;
+    margin-left: 20px;
+    width: 100vw;
+  }
+
+  /* コース・料金 */
+  #s_course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F0F5E1;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  #s_course h3{
+    margin-top: 50px;
+    padding: 0;
+  }
+  #courseContents{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    margin: 50px auto 0 auto;
+  }
+  #courseContents > div{
+    margin-top: 50px;
+  }
+  #s_course .baseBox .backStr.backPos{
+    transform: translate(-10%, -150%);
+  }
+  #s_course .baseBox .backImg.backPos{
+    transform: translate(-30%, -80%);
+  }
+
+  /* お客様の声 */
+  #s_voice{
+    margin-bottom: 50px;
+  }
+  .bottomCarousel{
+    display: none;
+  }
+  .SP-bottomCarousel .carouselImg{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+  }
+  .semicircle {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    height: 0;
+    z-index: 20;
+  }
+  .semicircle::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    z-index: 30;
+    width: 600px;
+    height: 488px;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: translateX(-50%) translateY(70%);
+    bottom: 0px;
+  }
+  #s_voice h3,
+  #s_voice p
+  {
+    top: -70px;
+  }
+  #s_voice div:has(.detailBtn){
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 50px;
+  }
+  .voice{
+    display: block;
+    position: relative;
+    top: 80px;
+    z-index: 90;
+  }
+  .voice div{
+    width: 20%;
+    min-width: 250px;
+    margin: 50px auto;
   }
 }

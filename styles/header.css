@@ -7,7 +7,6 @@ header{
   justify-content: space-between;
   font-size: 34px;
   z-index: 99999;
-  margin: 0 40px;
   background-color: #ffffff;
 }
 header > a{
@@ -71,6 +70,9 @@ header > nav a:hover{
 
 /* PC用 */
 @media screen and (min-width: 1051px){
+  header{
+    margin: 0 40px;
+  }
   #nav-pc{
     display: block;
   }
@@ -83,7 +85,7 @@ header > nav a:hover{
 /* SP・TAB用 */
 @media screen and (max-width: 1050px){
   header{
-    margin-right: 20px;
+    margin: 0 20px;
   }
   #nav-pc{
     display: none;
