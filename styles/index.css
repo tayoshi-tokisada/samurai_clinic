@@ -448,15 +448,17 @@ header > #nav-pc a:hover{
     width: 100%;
     padding-bottom: 100px;
   }
+  #s_course > div{
+    margin-left:  5vw;
+    margin-right:  5vw;
+  }
   #s_course h3{
     margin-top: 50px;
     padding: 0;
   }
   #courseContents{
     position: relative;
-    display: flex;
-    flex-flow: column;
-    margin: 50px auto 0 auto;
+    margin-top: 50px;
   }
   #courseContents > div{
     margin-top: 50px;
@@ -493,12 +495,16 @@ header > #nav-pc a:hover{
     content: '';
     left: 50%;
     z-index: 30;
-    width: 600px;
-    height: 488px;
+    width: 300px;
+    height: 280px;
     border-radius: 50%;
     background: #ffffff;
-    transform: translateX(-50%) translateY(70%);
+    transform: translateX(-50%) translateY(60%);
     bottom: 0px;
+  }
+  .semicircle p{
+    margin-left: 5%;
+    margin-right: 5%;
   }
   #s_voice h3,
   #s_voice p
@@ -516,6 +522,8 @@ header > #nav-pc a:hover{
     position: relative;
     top: 80px;
     z-index: 90;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .voice div{
     width: 20%;
