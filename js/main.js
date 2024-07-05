@@ -7,7 +7,7 @@ $(window).on("scroll", function(){
   const scrollValue = document.scrollingElement.scrollTop;
 
   if(scrollValue >= 300){
-    $("#backToTopBtn").css("bottom", "100px");
+    $("#backToTopBtn").css("bottom", "min(20vw, 100px)");
     $("#backToTopBtn").css("opacity", "1");
   }
   else{
