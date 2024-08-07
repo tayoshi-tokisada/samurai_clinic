@@ -1,33 +1,131 @@
 /* コース・料金 */
-#s_course{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-#s_course h3{
-  margin-top: 0;
+/* PC */
+@media screen and (min-width: 781px){
+  #s_course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  #s_course h3{
+    margin-top: 0;
+  }
+  #courseContent{
+    display: flex;
+    justify-content: center;
+  }
+  #courseContent div:nth-of-type(n+2){
+    margin-left: 100px;
+  }
+
+  /* 保険診療 */
+  #s_insurance,
+  #s_selfPay{
+    margin: 100px auto 200px auto;
+    max-width: 800px;
+  }
+  #insuranceContent,
+  #selfPayContent{
+    display: flex;
+    justify-content: center;
+  }
+  .pcOnly{
+    display: block;
+  }
+  .conceptLeft{
+    flex-grow: 1;
+    width: 50%;
+    margin-right: 30px;
+  }
+  #selfPayPrice{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #selfPayPrice p{
+    margin: 0;
+  }
+  #selfPayPrice br{
+    display: none;
+  }
+  .conceptRight{
+    flex-grow: 1;
+    width: 50%;
+    margin-left: 20px;
+  }
+  #s_insurance img,
+  #s_selfPay img{
+    width: 520px;
+    height: 320px;
+  }
 }
 
-/* 保険診療 */
-#s_insurance,
-#s_selfPay{
-  margin: 100px auto 200px auto;
-  max-width: 800px;
-}
-.conceptLeft{
-  flex-grow: 1;
-  width: 50%;
-  margin-right: 30px;
-}
-.conceptRight{
-  flex-grow: 1;
-  width: 50%;
-  margin-left: 20px;
-}
-#s_insurance img,
-#s_selfPay img{
-  width: 520px;
-  height: 320px;
+/* SP */
+@media screen and (max-width: 780px){
+  #s_course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 50px auto;
+  }
+  #s_course h3{
+    margin-top: 0;
+    padding: 0;
+  }
+  #s_course p br{
+    display: none;
+  }
+  #courseContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #courseContent div:nth-last-of-type(n+2){
+    margin-bottom: 50px;
+  }
 
+  /* 保険診療 */
+  #s_insurance{
+    margin: 10px auto 50px auto;
+    max-width: 90%;
+  }
+  #s_selfPay{
+    margin: 10px auto 100px auto;
+    max-width: 90%;
+  }
+  #insuranceContent,
+  #selfPayContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pcOnly{
+    display: none;
+  }
+  .conceptLeft{
+    flex-grow: 1;
+    width: 100%;
+  }
+  #selfPayPrice{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #selfPayPrice p{
+    margin: 0;
+  }
+  #selfPayPrice br{
+    display: block;
+  }
+  .conceptRight{
+    flex-grow: 1;
+    width: 100%;
+  }
+  #s_insurance img,
+  #s_selfPay img{
+    width: 100%;
+    height: auto;
+  }
 }
