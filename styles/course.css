@@ -108,6 +108,7 @@
   .conceptLeft{
     flex-grow: 1;
     width: 100%;
+    order: 2;
   }
   #selfPayPrice{
     margin-top: 1em;
@@ -122,6 +123,7 @@
   .conceptRight{
     flex-grow: 1;
     width: 100%;
+    order: 1;
   }
   #s_insurance img,
   #s_selfPay img{
