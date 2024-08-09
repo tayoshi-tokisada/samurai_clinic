@@ -7,7 +7,8 @@ article{
   position: relative;
   z-index: 90;
   background-color: #fff;
-  margin: 50px 10vw;
+  margin: 50px auto;
+  width: min(80%, 780px);
 }
 #s_contact > div{
   display: flex;
@@ -72,7 +73,7 @@ form ::placeholder{
 /* 送信完了 */
 .thanks{
   border: solid 1px #cccccc;
-  padding: 50px;
+  padding: 20px;
 }
 #backToContact{
   width: 25%;
@@ -87,4 +88,18 @@ form ::placeholder{
   font-weight: 700;
   margin: 0 auto;
   color: #ffffff;
+}
+
+/* PC */
+@media screen and (min-width: 781px){
+  .thanks br{
+    display: none;
+  }
+}
+
+/* SP */
+@media screen and (max-width: 780px){
+  .thanks br{
+    display: inline;
+  }
 }
