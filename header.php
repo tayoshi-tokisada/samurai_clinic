@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <title><?php echo post_custom("pageTitle");?></title>
+    <meta name="description" content="<?php echo post_custom("description");?>">
     <meta charset="utf-8">
-    <title>トップページ｜SAMURAI整体院</title>
-    <meta name="description" content="当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。ご不安な点や疑問点などお気軽にご相談くださいませ。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -14,9 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Shippori+Mincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/header.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/main-visual.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/access.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/footer.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/index.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo the_title();?>.css">
     <?php wp_head();?>
   </head>
 
