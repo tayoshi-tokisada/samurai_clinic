@@ -23,18 +23,18 @@
   <body>
     <header>
       <!-- ロゴ -->
-      <a href="index.html">
+      <a href="<?php echo home_url();?>">
         <img class="titleLogo" src="<?php echo get_template_directory_uri();?>/image/logo/logo.svg" alt="タイトルロゴ">
       </a>
       <!-- PC用nav -->
       <nav id="nav-pc">
-        <a href="index.html">ホーム</a>
-        <a href="about.html">当院について</a>
-        <a href="course.html">コース・料金</a>
-        <a href="news.html">お知らせ</a>
-        <a href="voice.html">お客様の声</a>
+        <a href="<?php echo home_url();?>">ホーム</a>
+        <a href="<?php echo home_url();?>/about">当院について</a>
+        <a href="<?php echo home_url();?>/course">コース・料金</a>
+        <a href="<?php echo home_url();?>/news">お知らせ</a>
+        <a href="<?php echo home_url();?>/voice">お客様の声</a>
         <button class="contactHeaderBtn">
-          <a href="contact.html">ご予約・お問い合わせ</a>
+          <a href="<?php echo home_url();?>/contact">ご予約・お問い合わせ</a>
         </button>
       </nav>
       <!-- SP用メニューボタン -->
@@ -43,20 +43,20 @@
       <nav id="nav-sp">
         <div>
           <div>
-            <a href="index.html">
+            <a href="<?php echo home_url();?>">
               <img class="titleLogo" src="<?php echo get_template_directory_uri();?>/image/logo/logo.svg" alt="タイトルロゴ">
             </a>
             <img id="menuClose" src="<?php echo get_template_directory_uri();?>/image/SP_MenuClose.svg" alt="">
           </div>
           <div>
             <p>メニュー</p>
-            <a href="index.html">ホーム</a>
-            <a href="about.html">当院について</a>
-            <a href="course.html">コース・料金</a>
-            <a href="news.html">お知らせ</a>
-            <a href="voice.html">お客様の声</a>
+            <a href="<?php echo home_url();?>">ホーム</a>
+            <a href="<?php echo home_url();?>/about">当院について</a>
+            <a href="<?php echo home_url();?>/course">コース・料金</a>
+            <a href="<?php echo home_url();?>/news">お知らせ</a>
+            <a href="<?php echo home_url();?>/voice">お客様の声</a>
             <button class="contactHeaderBtn">
-              <a href="contact.html">ご予約・お問い合わせ</a>
+              <a href="<?php echo home_url();?>/contact">ご予約・お問い合わせ</a>
             </button>
           </div>
         </div>

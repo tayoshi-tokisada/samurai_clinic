@@ -1,15 +1,15 @@
 <footer>
       <div>
-        <a href="index.html">
+        <a href="<?php echo home_url();?>">
           <img class="titleLogo" src="<?php echo get_template_directory_uri();?>/image/logo/logo.svg" alt="タイトルロゴ">
         </a>
         <nav>
-          <a href="index.html">ホーム</a>
-          <a href="about.html">当院について</a>
-          <a href="course.html">コース・料金</a>
-          <a href="news.html">お知らせ</a>
-          <a href="voice.html">お客様の声</a>
-          <a href="contact.html">ご予約・お問い合わせ</a>
+          <a href="<?php echo home_url();?>">ホーム</a>
+          <a href="<?php echo home_url();?>/about">当院について</a>
+          <a href="<?php echo home_url();?>/course">コース・料金</a>
+          <a href="<?php echo home_url();?>/news">お知らせ</a>
+          <a href="<?php echo home_url();?>/voice">お客様の声</a>
+          <a href="<?php echo home_url();?>/contact">ご予約・お問い合わせ</a>
         </nav>
       </div>
       <p class="copyright">&copy;2023 SAMURAI整体院</p>

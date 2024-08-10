@@ -60,7 +60,7 @@
             </div>
           </div>
           <div id="newsListLink">
-            <a href="news.html">→お知らせ一覧へ</a>
+            <a href="<?php echo home_url();?>/news">→お知らせ一覧へ</a>
           </div>
         </section>
         <!-- 特長 -->
@@ -85,7 +85,7 @@
                 ご不安な点や疑問点などお気軽にご相談くださいませ。
               </p>
               <div class="d_detailBtn">
-                <button class="detailBtn"><a href="about.html">当院について</a></button>
+                <button class="detailBtn"><a href="<?php echo home_url();?>/about">当院について</a></button>
               </div>
             </div>
             <div class="baseBox conceptRight">
@@ -126,7 +126,7 @@
             </div>
           </div>
           <div class="tac baseBox">
-            <button class="detailBtn"><a href="course.html">コース・料金詳細へ</a></button>
+            <button class="detailBtn"><a href="<?php echo home_url();?>/course">コース・料金詳細へ</a></button>
             <img class="backImg backPos" src="<?php echo get_template_directory_uri();?>/image/background/BGicon_Green.png" alt="">
           </div>
         </section>
@@ -190,7 +190,7 @@
             </div>
           </div>
           <div>
-            <button class="detailBtn"><a href="voice.html">お客様の声一覧へ</a></button>
+            <button class="detailBtn"><a href="<?php echo home_url();?>/voice">お客様の声一覧へ</a></button>
           </div>
         </section>
         <?php get_template_part("access");?>

@@ -45,7 +45,7 @@
                   <td>●</td>
                 </tr>
               </table>
-              <button class="contactBtn"><a href="contact.html">ご予約・お問い合わせはこちらから</a></button>
+              <button class="contactBtn"><a href="<?php echo home_url();?>/contact">ご予約・お問い合わせはこちらから</a></button>
             </div>
             <div class="accessRight">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0688551336552!2d139.77207767641622!3d35.699923172581265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fee13660e23%3A0x77137876edf742ac!2z5L2P5Y-L5LiN5YuV55Sj56eL6JGJ5Y6f6aeF5YmN44OT44Or!5e0!3m2!1sja!2sjp!4v1716901939735!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
