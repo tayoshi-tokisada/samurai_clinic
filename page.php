@@ -4,9 +4,11 @@
         <?php get_template_part("mainVisual");?>
         <!-- breadcrumbs -->
         <section id="s_breadcrumbs">
-          <p>ホーム > ご予約・お問い合わせ</p>
+          <p>ホーム > <?php echo post_custom("titleJP");?></p>
         </section>
-        <?php the_content();?>
+        <section id="mainContent">
+          <?php the_content();?>
+        </section>
         <?php get_template_part("access");?>
       </article>
     </main>

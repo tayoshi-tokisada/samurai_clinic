@@ -3,71 +3,44 @@ article{
 }
 
 /* ご予約・お問い合わせ */
-#s_contact{
+#mainContent{
   position: relative;
   z-index: 90;
   background-color: #fff;
   margin: 50px auto;
   width: min(80%, 780px);
 }
-#s_contact > div{
-  display: flex;
-  justify-content: left;
-  margin-top: 50px;
-}
-#s_contact > div > div{
-  margin-left: 20px;
-}
-#s_contact h2{
-  font-size: 24px;
-  font-weight: 700;
-  color: #0C4324;
-}
-#s_contact h2::before{
+#mainContent h2::before{
   content: "";
 }
-form div{
-  margin-bottom: 44px;
+.wpforms-required-label{
+  display: none;
 }
-form label{
-  font-size: 16px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
-}
-form label span{
-  font-size: 14px;
-}
-form input{
-  border: solid 1px rgba(0,0,0,0.36);;
-  height: 44px;
-  width: 100%;
-}
-form select{
-  border: solid 1px rgba(0,0,0,0.36);
-  height: 44px;
-  width: 100%;
-  color: rgba(0,0,0,0.36);
-}
-form textarea{
-  border: solid 1px rgba(0,0,0,0.36);
-  height: 88px;
-  width: 100%;
-}
-form ::placeholder{
-  color: rgba(0,0,0,0.36);
-}
-#submit{
+div.wpforms-container-full .wpforms-form .wpforms-submit-container{
   font-size: 14px;
   font-weight: 700;
   text-align: center;
   display: block;
-  width: 25%;
   margin: 0 auto;
   background-color: #1B9240;
   color: #ffffff;
   border: none;
   border-radius: 4px;
+}
+.submitBtn:not(:hover):not(:active){
+  background-color: #1B9240 !important;
+}
+.submitBtn:link{
+  background-color: #1B9240 !important;
+}
+.submitBtn:visited{
+  background-color: #1B9240 !important;
+}
+.submitBtn:active{
+  background: none !important;
+}
+.submitBtn:hover{
+  background: none !important;
 }
 
 /* 送信完了 */
@@ -92,6 +65,9 @@ form ::placeholder{
 
 /* PC */
 @media screen and (min-width: 781px){
+  div.wpforms-container-full .wpforms-form .wpforms-submit-container{
+    width: 25%;
+  }
   .thanks br{
     display: none;
   }
@@ -99,6 +75,9 @@ form ::placeholder{
 
 /* SP */
 @media screen and (max-width: 780px){
+  div.wpforms-container-full .wpforms-form .wpforms-submit-container{
+    width: 100%;
+  }
   .thanks br{
     display: inline;
   }
