@@ -2,7 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>トップページ｜SAMURAI整体院</title>
+    <title><?php
+      echo "トップページ｜" .  get_bloginfo("name");
+    ?></title>
     <meta name="description" content="当院では、問診にてお客様の症状や生活スタイル、ご希望を丁寧にお伺いした上で施術方針を立てていきます。また、根本的に症状を改善するために、お客様ご自身で行えるケアやストレッチもお伝えします。ご不安な点や疑問点などお気軽にご相談くださいませ。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add the slick-theme.css if you want default styling -->

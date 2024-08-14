@@ -4,7 +4,7 @@
         <?php get_template_part("mainVisual");?>
         <!-- breadcrumbs -->
         <section id="s_breadcrumbs">
-          <p>ホーム > 当院について</p>
+          <p>ホーム > <?php echo post_custom("titleJP");?></p>
         </section>
         <!-- 特長 -->
         <section id="s_concept">

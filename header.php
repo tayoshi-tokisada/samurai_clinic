@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title><?php echo post_custom("pageTitle");?></title>
-    <meta name="description" content="<?php echo post_custom("description");?>">
+    <title><?php
+      echo post_custom("titleJP") . "｜" . get_bloginfo("name");
+    ?></title>
+    <meta name="description" content="<?php echo get_bloginfo("description");?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add the slick-theme.css if you want default styling -->

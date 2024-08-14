@@ -4,7 +4,7 @@
         <?php get_template_part("mainVisual");?>
         <!-- breadcrumbs -->
         <section id="s_breadcrumbs">
-          <p>ホーム > コース・料金</p>
+          <p>ホーム > <?php echo post_custom("titleJP");?></p>
         </section>
         <!-- コース・料金 -->
         <section id="s_course">
