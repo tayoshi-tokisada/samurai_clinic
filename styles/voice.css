@@ -16,7 +16,8 @@
     position: relative;
     z-index: 90;
     background-color: #fff;
-    margin: 0 10vw;
+    margin: 0 auto;
+    width: min(80%, 780px);
   }
   #s_voice > div{
     display: flex;
@@ -25,25 +26,28 @@
   }
   #s_voice > div > img{
     margin-right: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
   }
-  #s_voice > p:nth-last-of-type(1){
+  #s_voice > .pagination{
     color: #1B9240;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(1){
+  #s_voice > .pagination > .current{
     color: #fff;
     background-color: #1B9240;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(1)::after,
-  #s_voice > p > span:nth-of-type(1)::before{
+  #s_voice > .pagination > .current::after,
+  #s_voice > .pagination > .current::before{
     content: "_";
     color: #1B9240;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::after,
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::before{
+  #s_voice > .pagination > a::after,
+  #s_voice > .pagination > a::before{
     content: "_";
     color: #fff;
   }
@@ -79,25 +83,28 @@
   }
   #s_voice > div > img{
     margin-right: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
   }
-  #s_voice > p:nth-last-of-type(1){
+  #s_voice > .pagination{
     color: #1B9240;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(1){
+  #s_voice > .pagination > .current{
     color: #fff;
     background-color: #1B9240;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(1)::after,
-  #s_voice > p > span:nth-of-type(1)::before{
+  #s_voice > .pagination > .current::after,
+  #s_voice > .pagination > .current::before{
     content: "_";
     color: #1B9240;
   }
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::after,
-  #s_voice > p:nth-last-of-type(1) > span:nth-of-type(n+2)::before{
+  #s_voice > .pagination > a::after,
+  #s_voice > .pagination > a::before{
     content: "_";
     color: #fff;
   }

@@ -2,7 +2,11 @@
 <html lang="ja">
   <head>
     <title><?php
-      echo post_custom("titleJP") . "｜" . get_bloginfo("name");
+      if(is_archive()):
+        echo esc_html(get_post_type_object(get_post_type())->label) . "｜" . get_bloginfo("name");
+      else:
+        echo post_custom("titleJP") . "｜" . get_bloginfo("name");
+      endif;
     ?></title>
     <meta name="description" content="<?php echo get_bloginfo("description");?>">
     <meta charset="utf-8">
@@ -19,7 +23,11 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/main-visual.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/access.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/footer.css">
+    <?php if(is_archive()):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo esc_html(get_post_type_object(get_post_type())->name);?>.css">
+    <?php else:?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo the_title();?>.css">
+    <?php endif;?>
     <?php wp_head();?>
   </head>
 
