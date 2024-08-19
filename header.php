@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/footer.css">
     <?php if(is_page()):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo the_title();?>.css">
+    <?php elseif(is_single()):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/single.css">
     <?php else:?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo get_page_name();?>.css">
     <?php endif;?>

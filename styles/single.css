@@ -42,22 +42,29 @@
     color: #0C4324;
   }
 
-  #s_single{
+  #mainContent{
     position: relative;
     z-index: 90;
     background-color: #fff;
     margin-left: 10vw;
     width: 70vw;
   }
-  #s_single p:nth-last-of-type(1){
+  #mainContent p:nth-last-of-type(n+1){
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: normal;
+  }
+  #mainContent p:nth-last-of-type(1)  {
     font-size: 18px;
     text-align: center;
     margin-top: 50px;
   }
-  #s_single .pcOnly{
+  #mainContent .pcOnly{
     display: inline;
   }
-  #s_single img{
+  #mainContent img{
     border-radius: 24px;
   }
 
@@ -65,9 +72,13 @@
   #s_category{
     position: absolute;
     z-index: 100;
-    top: 40vw;
+    top: 44vw;
     right: 0;
-    margin-right: min(10vw, 100vw - 990px);
+    margin-right: 10vw;
+  }
+  #s_category li{
+    list-style-type: "";
+    margin-top: 1em;
   }
 }
 
@@ -115,29 +126,41 @@
     color: #0C4324;
   }
 
-  #s_single{
+  #mainContent{
     position: relative;
     z-index: 90;
     background-color: #fff;
     width: 90%;
     margin: 0 auto;
   }
-  #s_single p:nth-last-of-type(1){
+  #mainContent p:nth-last-of-type(n+1){
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: normal;
+  }
+  #mainContent p:nth-last-of-type(1){
     font-size: 18px;
     text-align: center;
     margin-top: 50px;
   }
-  #s_single img{
+  #mainContent img{
     width: 100%;
+    height: auto;
     border-radius: 24px;
   }
-  #s_single .pcOnly{
+  #mainContent .pcOnly{
     display: none;
   }
 
   /* カテゴリ */
   #s_category{
-    width: 90%;
+    width: 80%;
     margin: 50px auto;
+  }
+  #s_category li{
+    list-style-type: "";
+    margin-top: 1em;
   }
 }
