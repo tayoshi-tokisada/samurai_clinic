@@ -16,4 +16,14 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
  *  サムネイル画像を設定する
  *----------------------------------------*/
 add_theme_support('post-thumbnails');
+
+/*------------------------------------------
+ *  URLからページ名を取得する
+ *----------------------------------------*/
+function get_page_name(){
+  $url = $_SERVER["REQUEST_URI"];
+  $url = substr($url, 1);
+  $url = mb_strstr($url, "/", true);
+  return $url;
+}
 ?>

@@ -5,17 +5,17 @@
           <div id="topLeft">
             <div>
               <p><?php
-                if(is_archive()):
-                  echo ucfirst(esc_html(get_post_type_object(get_post_type())->name));
-                else:
+                if(is_page()):
                   echo post_custom("titleEN");
+                else:
+                  echo get_titleEN();
                 endif;
               ?></p>
               <p><?php
-                if(is_archive()):
-                  echo esc_html(get_post_type_object(get_post_type())->label);
-                else:
+                if(is_page()):
                   echo post_custom("titleJP");
+                else:
+                  echo get_titleJP();
                 endif;
               ?></p>
               <img src="<?php echo get_template_directory_uri();?>/image/_x31_7.svg" alt="">

@@ -4,46 +4,56 @@
   article{
     position: relative;
   }
-  #s_news{
+  #mainContent{
     position: relative;
     z-index: 90;
     background-color: #fff;
-    margin-left: 10vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 80%;
   }
-  #s_news > div{
+  #mainContent > div{
     display: flex;
     justify-content: left;
     margin-top: 50px;
   }
-  #s_news > div > div{
+  #mainContent > div > img{
+    width: 320px;
+    height: 220px;
+    border-radius: 24px;
+  }
+  #mainContent > div > div{
     margin-left: 20px;
   }
-  #s_news h2{
+  #mainContent h2{
     font-size: 24px;
     font-weight: 700;
     color: #000;
   }
-  #s_news h2::before{
+  #mainContent h2::before{
     content: "";
   }
-  #s_news > .pagination{
+  #mainContent > .pagination{
     color: #1B9240;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
   }
-  #s_news > .pagination > span:nth-of-type(1){
+  #mainContent > .pagination > span:nth-of-type(1){
     color: #fff;
     background-color: #1B9240;
   }
-  #s_news > .pagination > span:nth-of-type(1)::after,
-  #s_news > .pagination > span:nth-of-type(1)::before{
+  #mainContent > .pagination > span:nth-of-type(1)::after,
+  #mainContent > .pagination > span:nth-of-type(1)::before{
     content: "_";
     color: #1B9240;
   }
-  #s_news > .pagination > span:nth-of-type(n+2)::after,
-  #s_news > .pagination > span:nth-of-type(n+2)::before{
+  #mainContent > .pagination > span:nth-of-type(n+2)::after,
+  #mainContent > .pagination > span:nth-of-type(n+2)::before{
     content: "_";
     color: #fff;
   }
@@ -52,9 +62,13 @@
   #s_category{
     position: absolute;
     z-index: 100;
-    top: 35vw;
+    top: 37vw;
     right: 0;
     margin-right: 10vw;
+  }
+  #s_category li{
+    list-style-type: "";
+    margin-top: 1em;
   }
 }
 
@@ -64,55 +78,64 @@
   article{
     position: relative;
   }
-  #s_news{
+  #mainContent{
     position: relative;
     z-index: 90;
     background-color: #fff;
     width: 90%;
     margin: 0 auto;
   }
-  #s_news > div{
+  #mainContent > div{
     display: flex;
     flex-direction: column;
     justify-content: left;
     margin-top: 50px;
   }
-  #s_news > div > div{
+  #mainContent > div > img{
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+  }
+  #mainContent > div > div{
     margin-left: 20px;
   }
-  #s_news h2{
+  #mainContent h2{
     font-size: 24px;
     font-weight: 700;
     color: #000;
   }
-  #s_news h2::before{
+  #mainContent h2::before{
     content: "";
   }
-  #s_news > .pagination{
+  #mainContent > .pagination{
     color: #1B9240;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
   }
-  #s_news > .pagination > span:nth-of-type(1){
+  #mainContent > .pagination > span:nth-of-type(1){
     color: #fff;
     background-color: #1B9240;
   }
-  #s_news > .pagination > span:nth-of-type(1)::after,
-  #s_news > .pagination > span:nth-of-type(1)::before{
+  #mainContent > .pagination > span:nth-of-type(1)::after,
+  #mainContent > .pagination > span:nth-of-type(1)::before{
     content: "_";
     color: #1B9240;
   }
-  #s_news > .pagination > span:nth-of-type(n+2)::after,
-  #s_news > .pagination > span:nth-of-type(n+2)::before{
+  #mainContent > .pagination > span:nth-of-type(n+2)::after,
+  #mainContent > .pagination > span:nth-of-type(n+2)::before{
     content: "_";
     color: #fff;
   }
 
   /* カテゴリ */
   #s_category{
-    width: 90%;
+    width: 80%;
     margin: 50px auto;
+  }
+  #s_category li{
+    list-style-type: "";
+    margin-top: 1em;
   }
 }

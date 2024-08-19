@@ -2,10 +2,10 @@
 <html lang="ja">
   <head>
     <title><?php
-      if(is_archive()):
-        echo esc_html(get_post_type_object(get_post_type())->label) . "｜" . get_bloginfo("name");
-      else:
+      if(is_page()):
         echo post_custom("titleJP") . "｜" . get_bloginfo("name");
+      else:
+        echo get_titleJP() . "｜" . get_bloginfo("name");
       endif;
     ?></title>
     <meta name="description" content="<?php echo get_bloginfo("description");?>">
@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/main-visual.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/access.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/footer.css">
-    <?php if(is_archive()):?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo esc_html(get_post_type_object(get_post_type())->name);?>.css">
-    <?php else:?>
+    <?php if(is_page()):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo the_title();?>.css">
+    <?php else:?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/<?php echo get_page_name();?>.css">
     <?php endif;?>
     <?php wp_head();?>
   </head>
@@ -42,7 +42,7 @@
         <a href="<?php echo home_url();?>">ホーム</a>
         <a href="<?php echo home_url();?>/about">当院について</a>
         <a href="<?php echo home_url();?>/course">コース・料金</a>
-        <a href="<?php echo home_url();?>/news">お知らせ</a>
+        <a href="<?php echo home_url();?>/news/all">お知らせ</a>
         <a href="<?php echo home_url();?>/voice">お客様の声</a>
         <button class="contactHeaderBtn">
           <a href="<?php echo home_url();?>/contact">ご予約・お問い合わせ</a>
@@ -64,7 +64,7 @@
             <a href="<?php echo home_url();?>">ホーム</a>
             <a href="<?php echo home_url();?>/about">当院について</a>
             <a href="<?php echo home_url();?>/course">コース・料金</a>
-            <a href="<?php echo home_url();?>/news">お知らせ</a>
+            <a href="<?php echo home_url();?>/news/all">お知らせ</a>
             <a href="<?php echo home_url();?>/voice">お客様の声</a>
             <button class="contactHeaderBtn">
               <a href="<?php echo home_url();?>/contact">ご予約・お問い合わせ</a>
